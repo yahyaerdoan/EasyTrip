@@ -1,0 +1,21 @@
+﻿@using EasyTrip.Models.Entities
+@model List<About> 
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/EasyTripLayout.cshtml";
+}
+<div class="content">
+    <div class="wrap">
+        <div class="about">        
+            <h2 style="color: #3d3d3d ">Machi Climate And Clouds</h2>
+            @foreach (var item in Model)
+            {
+                <img src="@item.ImageUrl" alt="Machi Climate And Clouds" />
+                <p style="text-align:justify; text-indent:25px">
+                    @item.Description
+                </p>
+            }
+        </div>
+    </div>
+</div>
+

@@ -127,8 +127,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PartialController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -165,6 +168,25 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Templates\BlogTemplate\about.html" />
+    <Content Include="Templates\BlogTemplate\contact.html" />
+    <Content Include="Templates\BlogTemplate\css\bootstrap.css" />
+    <Content Include="Templates\BlogTemplate\css\style.css" />
+    <Content Include="Templates\BlogTemplate\images\avatar.png" />
+    <Content Include="Templates\BlogTemplate\images\icon3.png" />
+    <Content Include="Templates\BlogTemplate\images\logo.jpg" />
+    <Content Include="Templates\BlogTemplate\images\man.jpg" />
+    <Content Include="Templates\BlogTemplate\images\more.png" />
+    <Content Include="Templates\BlogTemplate\images\post1.jpg" />
+    <Content Include="Templates\BlogTemplate\images\post2.jpg" />
+    <Content Include="Templates\BlogTemplate\images\post3.jpg" />
+    <Content Include="Templates\BlogTemplate\images\search.png" />
+    <Content Include="Templates\BlogTemplate\index.html" />
+    <Content Include="Templates\BlogTemplate\js\easing.js" />
+    <Content Include="Templates\BlogTemplate\js\jquery.min.js" />
+    <Content Include="Templates\BlogTemplate\js\move-top.js" />
+    <Content Include="Templates\BlogTemplate\single.html" />
+    <Content Include="Templates\BlogTemplate\w3layouts-License.txt" />
     <Content Include="Templates\EasyTrip\about.html" />
     <Content Include="Templates\EasyTrip\contact.html" />
     <Content Include="Templates\EasyTrip\css\slider.css" />
@@ -219,7 +241,10 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\EasyTripLayout.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
-    <Content Include="Views\Default\About.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\Partial\ScriptPartial.cshtml" />
+    <Content Include="Views\Blog\BlogDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

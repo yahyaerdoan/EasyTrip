@@ -6,10 +6,10 @@ using System.Web.Mvc;
 
 namespace EasyTrip.Controllers
 {
-    public class DefaultController : Controller
+    public class PartialController : Controller
     {
-        // GET: Default
-        public ActionResult Index()
+        // GET: Partial
+        public ActionResult ScriptPartial()
         {
             return View();
         }
