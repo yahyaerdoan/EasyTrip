@@ -12,14 +12,17 @@ namespace EasyTrip.Controllers
     {
         // GET: Blog
         EasyTripContext easyTripContext = new EasyTripContext();
+        Comment comment = new Comment();
         public ActionResult Index()
         {
-            var values = easyTripContext.Blogs.ToList();
-            return View(values);
+            //var values = easyTripContext.Blogs.ToList();
+            comment.BlogValue = easyTripContext.Blogs.ToList();
+            comment.BlogValue = easyTripContext.Blogs.OrderByDescending(b => b.BlogId).Take(2);
+            return View(comment);
         }
-        Comment comment = new Comment();
-        public ActionResult BlogDetail(int id)        {
-           
+        
+        public ActionResult BlogDetail(int id)        
+        {           
             comment.BlogValue = easyTripContext.Blogs.Where(b => b.BlogId == id).ToList();            
             comment.CommentValue = easyTripContext.Comments.Where(c => c.BlogId == id).ToList();            
             return View(comment);

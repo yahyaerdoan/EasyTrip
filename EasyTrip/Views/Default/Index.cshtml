@@ -1,4 +1,5 @@
-﻿
+﻿@using EasyTrip.Models.Entities
+@model List<Blog>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/EasyTripLayout.cshtml";
@@ -55,10 +56,11 @@
 
                         <div class="slider">
                             <ul class="rslides" id="slider1">
-                                <li><img src="~/Templates/EasyTrip/images/img1.jpg" alt=""></li>
-                                <li><img src="~/Templates/EasyTrip/images/img2.jpg" alt=""></li>
-                                <li><img src="~/Templates/EasyTrip/images/img3.jpg" alt=""></li>
-                                <li><img src="~/Templates/EasyTrip/images/img4.jpg" alt=""></li>
+                                @foreach (var item in Model)
+                                {
+                                    <li><img src="@item.ImageUrl" alt=""></li>
+                                }
+                               
                             </ul>
                         </div>
                     </div>
