@@ -16,5 +16,23 @@ namespace EasyTrip.Controllers
             var values = easyTripContext.Blogs.ToList();
             return View(values);
         }
+
+        public PartialViewResult ReadMorePartial()
+        {
+            var values = easyTripContext.Blogs.OrderByDescending(b => b.BlogId).Take(3).ToList();
+            return PartialView(values);
+        } 
+
+        public PartialViewResult Top10BlogPartial()
+        {
+            var values = easyTripContext.Blogs.ToList();
+            return PartialView(values);
+        }
+
+        public PartialViewResult OurBestPlacesPartial()
+        {
+            var values = easyTripContext.Blogs.Take(6).ToList();
+            return PartialView(values);
+        }
     }
 }
