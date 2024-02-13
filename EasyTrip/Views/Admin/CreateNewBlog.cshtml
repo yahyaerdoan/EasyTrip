@@ -1,0 +1,24 @@
+﻿@model EasyTrip.Models.Entities.Blog
+@{
+    ViewBag.Title = "CreateNewBlog";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Create New Blog</h2>
+<form class="form-group" method="post">
+    @Html.LabelFor(b => b.Title)
+    @Html.TextBoxFor(b => b.Title, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(b => b.Description)
+    @Html.TextAreaFor(b => b.Description, 10, 10, new { @class = "form-control", @cols = 10, @rows = 10 })
+    <br />
+    @Html.LabelFor(b => b.Date)
+    @Html.TextBoxFor(b => b.Date, new { @class = "form-control"})
+    <br />
+    @Html.LabelFor(b => b.ImageUrl)
+    @Html.TextBoxFor(b => b.ImageUrl, new { @class = "form-control" })
+    <br />
+    <button type="submit" class="btn btn-success">Submit New Blog</button>
+</form>
+
+

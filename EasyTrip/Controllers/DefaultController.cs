@@ -31,7 +31,13 @@ namespace EasyTrip.Controllers
 
         public PartialViewResult OurBestPlacesPartial()
         {
-            var values = easyTripContext.Blogs.Take(6).ToList();
+            var values = easyTripContext.Blogs.Take(4).ToList();
+            return PartialView(values);
+        }
+
+        public PartialViewResult OurLastBestPlacesPartial()
+        {
+            var values = easyTripContext.Blogs.OrderByDescending(b => b.BlogId).Take(4).ToList();
             return PartialView(values);
         }
     }

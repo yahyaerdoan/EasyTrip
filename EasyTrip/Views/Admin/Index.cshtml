@@ -1,0 +1,30 @@
+﻿@using EasyTrip.Models.Entities
+@model List<Blog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2 style="color:orangered">Blog List</h2>
+
+<table class="table table-bordered">
+
+    <tr style="background-color: antiquewhite">
+        <th>Id</th>
+        <th>Title</th>
+        <th>Delete</th>
+        <th>Update</th>
+        <th>Blog Detail</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.BlogId</td>
+            <td>@item.Title</td>
+            <td><a href="/Admin/DeleteBlog/@item.BlogId" class="btn btn-danger">Delete</a></td>
+            <td><a href="/Admin/CallUpdateBlog/@item.BlogId" class="btn btn-success">Update</a></td>
+            <td><a href="" class="btn btn-primary">Blog Detail</a></td>
+        </tr>
+    }
+</table>
+<td><a href="/Admin/CreateNewBlog/" class="btn btn-success">For New Blog</a></td>
