@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
-<h2>Create New Blog</h2>
+<h2 style="color:orangered">Create New Blog</h2>
 <form class="form-group" method="post">
     @Html.LabelFor(b => b.Title)
     @Html.TextBoxFor(b => b.Title, new { @class = "form-control" })
