@@ -57,5 +57,35 @@ namespace EasyTrip.Controllers
             easyTripContext.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult CommentList()
+        {
+            var values = easyTripContext.Comments.ToList();
+            return View(values);
+        }
+
+        public ActionResult DeleteComment(int id)
+        {
+            var value = easyTripContext.Comments.Find(id);
+            easyTripContext.Comments.Remove(value);
+            easyTripContext.SaveChanges();
+            return RedirectToAction("CommentList");
+        }
+
+        public ActionResult CallUpdateComment(int id)
+        {
+            var value = easyTripContext.Comments.Find(id);
+            return View("CallUpdateComment", value);
+        }
+
+        public ActionResult UpdateComment(Comment comment)
+        {
+            var value = easyTripContext.Comments.Find(comment.CommentId);
+            value.UserName = comment.UserName;
+            value.Email = comment.Email;
+            value.Remark = comment.Remark;         
+            easyTripContext.SaveChanges();
+            return RedirectToAction("CommentList");
+        }
     }
 }

@@ -1,0 +1,29 @@
+﻿@model EasyTrip.Models.Entities.Comment
+@{
+    ViewBag.Title = "CallUpdateComment";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Update Comment</h2>
+
+@using (Html.BeginForm("UpdateComment", "Admin", FormMethod.Post))
+{
+
+    @Html.LabelFor(b => b.CommentId)
+    @Html.TextBoxFor(b => b.CommentId, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(b => b.BlogId)
+    @Html.TextBoxFor(b => b.BlogId, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(b => b.UserName)
+    @Html.TextBoxFor(b => b.UserName, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(b => b.Remark)
+    @Html.TextAreaFor(b => b.Remark, 10, 10, new { @class = "form-control", @cols = 10, @rows = 10 })
+    <br />
+    @Html.LabelFor(b => b.Email)
+    @Html.TextBoxFor(b => b.Email, new { @class = "form-control" })
+    <br />   
+    <button type="submit" class="btn btn-success">Submit New Comment</button>
+}
+
