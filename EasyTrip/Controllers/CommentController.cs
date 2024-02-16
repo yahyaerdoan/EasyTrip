@@ -28,11 +28,11 @@ namespace EasyTrip.Controllers
         }
 
         [HttpPost]
-        public PartialViewResult DoCommentPartial(Comment comment)
+        public ActionResult DoCommentPartial(Comment comment)
         {
             easyTripContext.Comments.Add(comment);
             easyTripContext.SaveChanges();
-            return PartialView("Index");
+            return RedirectToAction("Index","Default");
         }
     }
 }
