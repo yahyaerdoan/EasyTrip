@@ -13,6 +13,7 @@ namespace EasyTrip.Controllers
     {
         // GET: Admin
         EasyTripContext easyTripContext = new EasyTripContext();
+        [Authorize]
         public ActionResult Index()
         {
             var values = easyTripContext.Blogs.ToList();

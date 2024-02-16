@@ -133,6 +133,7 @@
     <Compile Include="Controllers\CommentController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LogInController.cs" />
     <Compile Include="Controllers\PartialController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -227,6 +228,10 @@
     <Content Include="Templates\EasyTrip\js\jquery.min.js" />
     <Content Include="Templates\EasyTrip\js\responsiveslides.min.js" />
     <Content Include="Templates\EasyTrip\w3layouts-License.txt" />
+    <Content Include="Templates\Login\css\style.css" />
+    <Content Include="Templates\Login\images\b4.jpg" />
+    <Content Include="Templates\Login\index.html" />
+    <Content Include="Templates\Login\w3layouts-License.txt" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -259,6 +264,9 @@
     <Content Include="Views\Comment\Index.cshtml" />
     <Content Include="Views\Admin\CommentList.cshtml" />
     <Content Include="Views\Admin\CallUpdateComment.cshtml" />
+    <Content Include="Templates\Login\fonts\Asap-Regular.ttf" />
+    <Content Include="Templates\Login\fonts\Audiowide-Regular.ttf" />
+    <Content Include="Views\LogIn\LogIn.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
