@@ -4,7 +4,8 @@
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
-<h2>Update Blog</h2>
+<h2 style="color:orangered">Update Blog</h2>
+
 @using (Html.BeginForm("UpdateBlog", "Admin", FormMethod.Post))
 {
     @Html.LabelFor(b => b.BlogId)
