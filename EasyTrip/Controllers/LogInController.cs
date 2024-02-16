@@ -37,5 +37,11 @@ namespace EasyTrip.Controllers
                 return View();
             }           
         }
+
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("LogIn", "LogIn");
+        }
     }
 }
