@@ -1,0 +1,15 @@
+﻿@model EasyTrip.Models.Entities.Comment
+@foreach (var item in Model.CommentValue)
+{
+    <ul class="comment-list">
+        <li>
+            <img src="~/Templates/BlogTemplate/images/avatar.png" class="img-responsive" alt="">
+            <div class="desc">
+                <p>
+                    <b>@item.UserName: </b> @item.Remark
+                </p>
+            </div>
+            <div class="clearfix"></div>
+        </li>
+    </ul>
+}
